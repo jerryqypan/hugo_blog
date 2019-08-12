@@ -1,0 +1,38 @@
+<div class="introduction">
+	{{ with .Site.Params.projects }}
+	<h4>Projects</h4>
+	<ul>
+		{{- range $index, $projects_map := $.Site.Params.projects -}}
+
+		{{ range $elem_index, $project := $projects_map.project }}
+		<li>
+			{{if ($project.project_page)}}
+			<a href="{{ $project.project_page }}" class="project"> {{ $project.name }}</a>
+			{{ else }}
+			<span class="project"> {{ $project.name }} </span>
+			{{end}}
+			{{ if or ($project.code_link) ($project.blog_link) }}
+			<div class="code_blog">
+				{{ with $project.code_link }}
+				[<a href="{{ . }}">code</a>]
+				{{ end }}
+
+				{{ with $project.blog_link }}
+				[<a href="{{ . }}">blog</a>]
+				{{ end }}
+			</div>
+			{{ end }}
+
+			{{ with $project.description }}
+			<div class="project_description">
+				{{ . | markdownify}}
+			</div>
+			{{ end }}
+
+		</li>
+		{{ end }}
+
+		{{- end -}}
+	</ul>
+	{{ end }}
+</div>

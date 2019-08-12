@@ -1,0 +1,140 @@
+baseURL = "jerryqypan.github.io"
+languageCode = "en-us"
+title = "Jerry Pan"
+# theme = "avicenna"
+# googleAnalytics = "UA-1234-6"
+timeout=3000
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "All Posts"
+url = "/posts/index.html"
+weight = 2
+
+[[menu.main]]
+name = "Computer Science/Machine Learning"
+url = "/"
+weight = 3
+
+[[menu.main]]
+name = "Food"
+url = "/"
+weight = 4
+
+[[menu.main]]
+name = "Lifestyle"
+url = "/"
+weight = 5
+
+[params]
+  subtitle= "Software Engineer at Facebook"
+  interests="machine learning, video games, food, photography, ..."
+  cv_name= "jerry_pan_resume_2019.pdf"
+  blog="/posts"
+
+[[params.affilation]]
+  name = "Facebook"
+  position = "Software Engineer"
+  contact = "jepan@"
+
+[[params.affilation]]
+  name = "Duke University"
+  position = "B.S. Computer Science"
+  contact = "jerry.pan@"
+
+[[params.social]]
+  name = "Facebook"
+  icon = "facebook"
+  url = "https://facebook.com/mastapan"
+
+[[params.social]]
+  name = "Instagram"
+  icon = "instagram"
+  url = "https://www.instagram.com/mastapan/"
+
+[[params.social]]
+  name = "GitHub"
+  icon = "github"
+  url = "https://github.com/jerryqypan"
+
+[[params.social]]
+  name = "LinkedIn"
+  icon = "linkedin"
+  url = "https://linkedin.com/in/jerry-pan-44510196/"
+
+
+[[params.introduction.paragraph]]
+  text="""Hi I am Jerry, fresh out of college and not ready for adulting.
+          I plan to use this website to blog about a wide variety of topics I am interested in,
+          hopefully at a consistent rate. Feel free to message me if you want to chat about anything!
+          (I will _eventually_ integrate the Avicenne and Ezhil theme into one theme instead of
+           using both of them)
+   """
+[[params.introduction.paragraph]]
+  text=""" I listed some of the things I have worked on in college below. Hopefully I will still
+          have motivation and time to work on interesting projects while I am working.
+  """
+
+# [[params.publications]]
+#   year="Preprint"
+#
+#   [[params.publications.paper]]
+#     name = "Enim nunc faucibus a pellentesque sit amet porttitor"
+#     authors = "Ana Alvardo, William Worthley, __Hadi Sinaee__"
+#     dest  = "Helga Zita Journal"
+#     link = "https://mypaperishere.com"
+#     code_link = "https://thecoderepo.com"
+#     blog_link = "https://myblogaboutit.com"
+#
+#   [[params.publications.paper]]
+#     name = "In cursus turpis massa tincidunt dui ut ornare lectus sit"
+#     authors = "__Hadi Sinaee__,Les Larkins, Edra Ethier"
+#     dest  = "Meklit Katlego Conference"
+#     link = "https://mypaperishere.com"
+#     code_link = "https://thecoderepo.com"
+#     blog_link = "https://myblogaboutit.com"
+
+[[params.publications]]
+  year="2018"
+
+  [[params.publications.paper]]
+		name = "Olympus: Sensor Privacy through Utility Aware Obfuscation"
+		authors = "Nisarg Raval, Ashwin Machanavajjhala, Jerry Pan"
+		dest  = "PoPETS 2019"
+		link = "https://petsymposium.org/2019/files/papers/issue1/popets-2019-0002.pdf"
+		code_link = ""
+		blog_link = ""
+
+[[params.projects]]
+	[[params.projects.project]]
+		name = "Chess Playing Robot"
+		description  = """This project is inspired by the Raspberry Turk (http://www.raspberryturk.com/).
+                      I created and trained the model for recognizing the chess pieces, alongside
+                      integrating the gameflow logic with the stockfish chess engine, which is used
+                      to compute the next move.
+                       """
+		project_page = ""
+		code_link = "https://github.com/DukeIEEE/Chess_Playing_Robot_2"
+		blog_link = ""
+
+ [[params.projects.project]]
+		name = "Anime Recommendation Website"
+		description  = """Built this with a friend as the final project for my Cloud Computing class.
+                    The recommendation engine uses explicit matrix factorization to compute latent features that best matches
+                    user ratings on myAnimeList and use the latent feature space to find animes similar
+                    to an anime the user queries.
+                    """
+		project_page = ""
+		code_link = "https://github.com/NaijiaoZhang/AniRec"
+		blog_link = ""
+#
+#  [[params.projects.project]]
+# 		name = "Integer eget aliquet nibh praesent tristique magna"
+# 		description  = ""
+# 		project_page = "https://myprojecthomepage.com"
+# 		code_link = ""
+# 		blog_link = "https://ablogpost.com"

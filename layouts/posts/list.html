@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+{{ partial "posts/header.html" . }}
+
+<body>
+	<div class="container wrapper list">
+		{{ partial "posts/head.html" . }}
+
+		{{ if isset .Data "Term" }}
+			<h1>Entries tagged - "{{.Data.Term}}"</h1>
+		{{ else }}
+			<h2 class="section-header">All articles</h2>
+			<h4>(Blog is WIP, all the topic links lead to about page. Styling is somewhat messed up, especially text in posts.) </h4>
+		{{ end }}
+
+		<div class="posts">
+			{{- range .Data.Pages -}}
+			{{- if (in (.Site.Params.excludedTypes | default (slice "page")) .Type) -}}
+			{{- else -}}
+			<div class="post">
+				<div class="meta">{{ dateFormat "Jan 2, 2006" .Date }}</div>
+				<a class="title" href="https://{{ .Permalink }}">{{.Title}}</a> &mdash;
+				<span class="description">
+					{{ if isset .Params "description" }}
+						{{ .Description }}
+					{{ else if gt (len .RawContent) 120 }}
+						{{ slicestr .RawContent 0 120 }}...
+					{{ else }}
+						{{ .RawContent }}
+					{{ end }}
+				</span>
+			</div>
+			{{- end -}}
+			{{- end -}}
+		</div>
+	</div>
+
+	{{ partial "posts/footer.html" . }}
+</body>
+
+</html>
