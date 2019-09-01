@@ -1,33 +1,34 @@
-baseURL = "jerryqypan.github.io"
+baseURL = "/"
 languageCode = "en-us"
 title = "Jerry Pan"
 # theme = "avicenna"
 # googleAnalytics = "UA-1234-6"
 timeout=3000
+relativeURLs = true
 
 [[menu.main]]
 name = "Home"
-url = "/"
+url = "/index.html"
 weight = 1
 
 [[menu.main]]
 name = "All Posts"
-url = "/posts/index.html"
+url = "./index.html"
 weight = 2
 
 [[menu.main]]
 name = "Computer Science/Machine Learning"
-url = "/"
+url = "./index.html"
 weight = 3
 
 [[menu.main]]
 name = "Food"
-url = "/"
+url = "./index.html"
 weight = 4
 
 [[menu.main]]
 name = "Lifestyle"
-url = "/"
+url = "./index.html"
 weight = 5
 
 [params]
